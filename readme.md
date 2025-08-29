@@ -2,15 +2,16 @@
 
 1. What is the difference between **getElementById, getElementsByClassName, and querySelector / querySelectorAll**?
 
-Ans:- getElementById: search and select id from element.
-getElementsByClassName: select all element which have same class name.
-querySelector: select first element which match with css selector.
-querySelectorAll: select all element which match with css selector as node list.
+Ans:- **getElementById:** search and select id from element.
+**getElementsByClassName:** select all element which have same class name.
+**querySelector:** select first element which match with css selector.
+**querySelectorAll:** select all element which match with css selector as node list.
 
 ---
 
 2. How do you **create and insert a new element into the DOM**?
-   Ans: first will create a new element using(document.createElement"") and then will and text after that (document.parent.appendchild())
+
+Ans: first will create a new element using(document.createElement"") and then will and text after that (document.parent.appendchild())
 
 ---
 
@@ -29,7 +30,7 @@ of child instant of giving separate event in multiple child element.
 
 5. What is the difference between **preventDefault() and stopPropagation()** methods?
 
-Ans: preventDefault(): it stops the default behavior
-stopPropagation() it stops the event bubbling.
+Ans: **preventDefault():** it stops the default behavior
+**stopPropagation()** it stops the event bubbling.
 
 ---

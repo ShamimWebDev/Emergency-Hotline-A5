@@ -34,14 +34,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (coins < 20) {
         alert(
-          "you don't have sufficient coin,to make a call you need 20 coin!!"
+          " you don't have sufficient coin,to make a call you need 20 coin!!"
         );
         return;
       }
 
       coins = coins - 20;
       coin.innerText = coins;
-      alert("Calling " + serviceName + serviceNumber + "...");
+      window.alert("📞Calling " + serviceName + serviceNumber + "...");
 
       let historyCall = document.createElement("div");
       historyCall.className =
@@ -73,5 +73,29 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+// copy number feature
+document.addEventListener("DOMContentLoaded", function () {
+  let copyBtns = document.querySelectorAll(".copy-btn");
+  let copyCountEl = document.getElementById("copy-count");
+  let copyCount = 0;
 
+  copyBtns.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      let card = btn.closest(".product-cart");
+      let number = card.querySelector(".number");
 
+      if (!number) return;
+
+      let numberText = number.innerText;
+
+      navigator.clipboard
+        .writeText(numberText)
+        .then(function () {
+          copyCount += 1;
+          copyCountEl.innerText = copyCount;
+          alert("Number copied: " + numberText);
+        })
+        .catch(function () {});
+    });
+  });
+});
